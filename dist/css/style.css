@@ -6,8 +6,8 @@
   --black: rgba(0, 0, 0, 0.9);
   --black-light: rgba(0, 0, 0, 0.6);
   --light-bg: rgba(218, 215, 205, 0.15);
-  --box-shadow-one: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1),
-    -0.5rem 0 1rem rgba(0, 0, 0, 0.1);
+  --box-shadow-one: 2px 2px 5px 4px rgba(0, 0, 0, 0.05),
+    -2px 0px 5px 4px rgba(0, 0, 0, 0.05);
   --box-shadow-two: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
@@ -354,6 +354,81 @@ html {
   margin-bottom: 1.5rem;
 }
 .about .about-text p {
+  font-size: 1.8rem;
+  color: var(--black-light);
+  line-height: 2;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.services {
+  background: var(--white);
+  padding: 10rem 10.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 1rem;
+  gap: 2rem;
+}
+.services .services-card {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--white);
+  box-shadow: var(--box-shadow-one);
+  border-radius: 0.5rem;
+  position: relative;
+}
+.services .services-card:hover img {
+  transform: translateY(-1rem);
+}
+.services .services-card h3 {
+  font-size: 2.5rem;
+  color: var(--black);
+  text-transform: capitalize;
+  color: var(--black);
+  margin: 1.8rem 0;
+}
+.services .services-card p {
+  font-size: 1.8rem;
+  color: var(--black-light);
+  line-height: 2;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+.services .services-card .border {
+  position: absolute;
+  bottom: 0;
+  left: 0rem;
+  width: 100%;
+  height: 1rem;
+  background: var(--green-dark);
+  border-radius: 0.5rem;
+}
+.services .report {
+  background: var(--green-light) !important;
+  color: white;
+}
+.services .report h3,
+.services .report p {
+  color: white;
+}
+.services .our-services h3 {
+  font-size: 3rem;
+  color: var(--black);
+  text-transform: capitalize;
+  color: var(--green-dark);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.services .our-services h2 {
+  font-size: 4rem;
+  color: var(--black);
+  text-transform: capitalize;
+  color: var(--black);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+.services .our-services p {
   font-size: 1.8rem;
   color: var(--black-light);
   line-height: 2;
