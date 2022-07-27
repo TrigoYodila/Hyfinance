@@ -423,8 +423,8 @@ html {
     box-shadow: var(--box-shadow-one);
     border-radius: 0.5rem;
     position: relative;
-    
-    &:hover img{
+
+    &:hover img {
       transform: translateY(-1rem);
     }
 
@@ -461,9 +461,124 @@ html {
     }
   }
 
-  .our-services{
-    
+  .our-services {
     h3 {
+      @include titleText(3rem);
+      color: var(--green-dark);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      @include titleText(4rem);
+      color: var(--black);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      @include graphText(1.8rem);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.experiences {
+  background: rgba(218, 215, 205, 0.2);
+  padding: 10rem 10.5rem;
+
+  .experiences-years{
+    @include grid(55rem);
+    gap: 2rem;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: solid .4rem rgba(0, 0, 0, 0.05);
+    padding-bottom: 18rem;
+
+    .years{
+      h3{
+        @include titleText(4rem);
+        line-height: 1.1;
+        color: var(--black);
+        margin-bottom: 1.5rem;
+      }
+
+      p{
+        @include graphText(1.8rem);
+        line-height: 1.8;
+      }
+
+      .parag{
+        margin-bottom: 2rem;
+      }
+      .list{
+        color: var(--black);
+        margin:1rem 0;
+      }
+
+      .list i{
+        color: var(--green-dark);
+        font-size: 2rem;
+        margin-right: 1.5rem;
+      }
+
+      .btn{
+        margin-top: 2rem;
+      }
+    }
+
+    .years-image{
+      position: relative;
+      img{
+        width: 55rem;
+        height: 50rem;
+      }
+
+      .text-image{
+        position: absolute;
+        bottom:-9rem;
+        left:-10rem;
+        width: 45rem;
+        background: var(--white);
+        padding: 3rem 2rem 2rem 4rem;
+        border-left: solid .8rem var(--green-dark);
+        box-shadow: var(--box-shadow-one);
+      }
+      .text-image p{
+        @include graphText(1.5rem);
+        line-height: 1.8;
+        color: rgba(0,0,0,0.7);
+        font-style: italic;
+      }
+    }
+
+  }
+
+  .entreprise{
+    padding-top: 6rem;
+    
+   .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+    .card .image{
+     
+      padding: 0 8rem;
+    }
+  }
+}
+
+.meet{
+  background: var(--white);
+  padding: 10rem 10.5rem;
+  @include grid(30rem);
+  gap:4rem;
+
+  .meet-with{
+     h3 {
       @include titleText(3rem);
       color: var(--green-dark);
       font-weight: 600;

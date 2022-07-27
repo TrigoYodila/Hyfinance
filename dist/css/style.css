@@ -434,4 +434,117 @@ html {
   line-height: 2;
   line-height: 1.8;
   margin-bottom: 1.5rem;
+}
+
+.experiences {
+  background: rgba(218, 215, 205, 0.2);
+  padding: 10rem 10.5rem;
+}
+.experiences .experiences-years {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(55rem, 1fr));
+  gap: 1rem;
+  gap: 2rem;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: solid 0.4rem rgba(0, 0, 0, 0.05);
+  padding-bottom: 18rem;
+}
+.experiences .experiences-years .years h3 {
+  font-size: 4rem;
+  color: var(--black);
+  text-transform: capitalize;
+  line-height: 1.1;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+}
+.experiences .experiences-years .years p {
+  font-size: 1.8rem;
+  color: var(--black-light);
+  line-height: 2;
+  line-height: 1.8;
+}
+.experiences .experiences-years .years .parag {
+  margin-bottom: 2rem;
+}
+.experiences .experiences-years .years .list {
+  color: var(--black);
+  margin: 1rem 0;
+}
+.experiences .experiences-years .years .list i {
+  color: var(--green-dark);
+  font-size: 2rem;
+  margin-right: 1.5rem;
+}
+.experiences .experiences-years .years .btn {
+  margin-top: 2rem;
+}
+.experiences .experiences-years .years-image {
+  position: relative;
+}
+.experiences .experiences-years .years-image img {
+  width: 55rem;
+  height: 50rem;
+}
+.experiences .experiences-years .years-image .text-image {
+  position: absolute;
+  bottom: -9rem;
+  left: -10rem;
+  width: 45rem;
+  background: var(--white);
+  padding: 3rem 2rem 2rem 4rem;
+  border-left: solid 0.8rem var(--green-dark);
+  box-shadow: var(--box-shadow-one);
+}
+.experiences .experiences-years .years-image .text-image p {
+  font-size: 1.5rem;
+  color: var(--black-light);
+  line-height: 2;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.7);
+  font-style: italic;
+}
+.experiences .entreprise {
+  padding-top: 6rem;
+}
+.experiences .entreprise .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.experiences .entreprise .card .image {
+  padding: 0 8rem;
+}
+
+.meet {
+  background: var(--white);
+  padding: 10rem 10.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1rem;
+  gap: 4rem;
+}
+.meet .meet-with h3 {
+  font-size: 3rem;
+  color: var(--black);
+  text-transform: capitalize;
+  color: var(--green-dark);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.meet .meet-with h2 {
+  font-size: 4rem;
+  color: var(--black);
+  text-transform: capitalize;
+  color: var(--black);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+.meet .meet-with p {
+  font-size: 1.8rem;
+  color: var(--black-light);
+  line-height: 2;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }/*# sourceMappingURL=style.css.map */
