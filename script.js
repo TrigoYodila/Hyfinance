@@ -1,3 +1,37 @@
+let contact = document.querySelector(".header .contact");
+let navbar = document.querySelector(".header .navbar .nav");
+let icons = document.querySelector(".header .icons");
+let contactinfo = document.querySelector(".header .contact-info");
+
+document.querySelector("#menu-btn").addEventListener("click",()=>{
+  navbar.classList.toggle("active");
+});
+
+document.querySelector("#info-btn").addEventListener("click",()=>{
+  contactinfo.classList.toggle("active");
+});
+
+document.querySelector("#close-contact-info").addEventListener("click",()=>{
+  contactinfo.classList.remove("active");
+})
+
+
+window.addEventListener("scroll",()=>{
+  navbar.classList.remove("active");
+  contactinfo.classList.remove("active");
+
+  console.log(scrollY);
+
+  if(window.scrollY > 0.1){
+    contact.style.display = "none";
+  }else{
+    contact.style.display = "flex";
+  }
+})
+
+
+
+
 var swiper = new Swiper(".home-slider", {
   loop: true,
   grabCursor: true,
@@ -10,7 +44,6 @@ var swiper = new Swiper(".home-slider", {
     prevEl: ".swiper-button-prev",
   },
 });
-
 
 var swiper = new Swiper(".news-card", {
   loop: true,
@@ -31,3 +64,4 @@ var swiper = new Swiper(".news-card", {
     },
   },
 });
+

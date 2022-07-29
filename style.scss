@@ -13,6 +13,7 @@
   --box-shadow-one: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
     -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
   --box-shadow-two: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+   --border: 0.1rem solid rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -52,10 +53,22 @@
   color: var(--white);
 }
 
-.icons div {
-    @include iconsBox();
-    margin-left: 0.3em;
+//Model des icones
+@mixin iconsBox() {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--green-dark);
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    background: var(--green-dark);
+    color: var(--white);
   }
+}
 
 html {
   font-size: 62.5%;
@@ -170,10 +183,6 @@ html {
         font-weight: bold;
         margin-left: -1rem;
       }
-
-      .icons{
-        @include iconsBox();
-      }
     }
 
     .nav {
@@ -182,6 +191,10 @@ html {
       justify-content: space-between;
       align-items: center;
 
+       &.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); //active le bloc nav
+      }
+      
       .lien {
         font-size: 1.4rem;
         font-weight: 700;
@@ -194,7 +207,75 @@ html {
         }
       }
     }
+
+    .icons{
+      display: none;
+      div{
+        @include iconsBox();
+      }
+    } 
   }
+
+  .contact-info {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 35rem;
+  background: var(--white);
+  height: 100%;
+  text-align: center;
+  z-index: 1100;
+  padding: 0 2rem;
+  padding-top: 3rem;
+  display: none;
+
+  &.active {
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+    display: block;
+  }
+
+  #close-contact-info {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    font-size: 4rem;
+    color: var(--black);
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+
+  .info {
+    padding: 2rem;
+    i {
+      @include iconsBox();
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      @include titleText(2rem);
+      padding: 1rem 0;
+    }
+
+    p {
+      @include graphText(1.5rem);
+    }
+  }
+
+  .share {
+    padding-top: 1rem;
+    border-top: var(--border);
+    margin-top: 1rem;
+
+    div {
+      @include iconsBox();
+      margin: 0 0.3rem;
+    }
+  }
+}
+
 }
 
 .home {
